@@ -10,9 +10,19 @@ backbone for searching inside file
 Not modlular, added comands:
 COUNT
 COUNTALL
+COUNT COUNTALL
+SHOWALL
+
+added feature:
+.and. between queries for multiple value to match search in database
+
+- V0.3
+modlular, added comands:
+TAXON 
+BDINSERT db="databasepath"
+
 
 Comands to do:
-TAXON
 FASTA
 
 
