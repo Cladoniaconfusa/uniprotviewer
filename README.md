@@ -17,7 +17,7 @@ added feature:
 .and. between queries for multiple value to match search in database
 
 - V0.3
-modlular, added comands:
+modular, added comands:
 TAXON 
 BDINSERT db="databasepath"
 
