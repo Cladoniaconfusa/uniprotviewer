@@ -7,5 +7,5 @@ El código empleado en esta versión para la extracción de informacion de la ba
 - taxon_command.py (https://github.com/javelezz1/Programming-course/blob/main/uniprot_processer/input_organizer.py)
 - uniprot_browser_2.0.py (https://github.com/javelezz1/Programming-course/blob/main/uniprot_processer/uniprot_browser_2.0.py)
 
-La información obtenida gracias a estos scripts es la utilizada por el código de mi autoria (sql_insert.py) para ser ingresada en la base de datos sql (try3.db), constituyendo
+La información obtenida gracias a estos scripts es la utilizada por el código de mi autoria (insertdatasql.py) para ser ingresada en la base de datos sql (try3.db), constituyendo
 el entregable SQL-Task 2 de la materia Programación - Énfasis Biología Computacional.
