@@ -1,7 +1,14 @@
+
 import sqlite3
 import sys
 
-
+dates={}
+names={}
+features={}
+codes={}
+comments={}
+protein={}
+faste={}
 def get_rutadb():
     for i in sys.argv:
         if i.startswith("db="):
