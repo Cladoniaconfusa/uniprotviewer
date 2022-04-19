@@ -2,13 +2,7 @@
 import sqlite3
 import sys
 
-dates={}
-names={}
-features={}
-codes={}
-comments={}
-protein={}
-faste={}
+
 def get_rutadb():
     for i in sys.argv:
         if i.startswith("db="):
@@ -25,7 +19,26 @@ def sql_insert_names(names):
 def sql_insert_dates(dates):
     conn = connect_db()
     with conn:
-        conn.execute("INSERT INTO Names VALUES(?,?)",dates)
+        conn.execute("INSERT INTO Dates VALUES(?,?,?)",dates)
+    conn.commit
+
+def sql_insert_features(features):
+    conn = connect_db()
+    with conn:
+        for i in features:
+            conn.execute("INSERT INTO Features VALUES(?,?,?,?)",i)
+    conn.commit
+
+def sql_insert_codes(codes):
+    conn = connect_db()
+    with conn:
+        conn.execute("INSERT INTO Codes VALUES(?,?)",codes)
+    conn.commit
+
+def sql_insert_comments(registro):
+    conn = connect_db()
+    with conn:
+        conn.execute("INSERT INTO Comments VALUES(?,?)",registro)
     conn.commit
 
 def connect_db():

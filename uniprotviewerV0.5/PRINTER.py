@@ -1,5 +1,5 @@
 import sys
-from insert_data_sql import sql_insert_names
+from insert_data_sql import sql_insert_codes, sql_insert_comments, sql_insert_names, sql_insert_dates, sql_insert_features
 
 def mostrar_memoria(memory,fieldlist):
     for line in memory:
@@ -27,20 +27,24 @@ def mostrar_names(names):
 def mostrar_dates(dates):
     if 'VERBOSE' in sys.argv:
         print(dates)
+    sql_insert_dates(dates)
 
 def mostrar_features(features):
-    if 'VERBOSE' in sys.argv:
         print("\n==TABLE FEATURES==")
         for i in features:
-            print(i)
+            if 'VERBOSE' in sys.argv:    
+                print(i)
+        sql_insert_features(features)
 
 def mostrar_codes(codes):
     if 'VERBOSE' in sys.argv:
         print(codes)
+    sql_insert_codes(codes)
 
 def mostrar_comments(registro):
     if 'VERBOSE' in sys.argv:
         print(registro)
+    sql_insert_comments(registro)
 
 def mostrar_protein(protein):
     if 'VERBOSE' in sys.argv:
